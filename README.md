@@ -1,2 +1,0 @@
-# Gunj Patel's Portfolio
-
