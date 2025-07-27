@@ -21,7 +21,6 @@ interface Project {
   image: string
   tags: string[]
   category: string
-  github: string
   demo: string
   status: string
   date: string
@@ -69,7 +68,6 @@ export default function AdminPage() {
     image: "",
     tags: "",
     category: "",
-    github: "",
     demo: "",
     status: "Draft",
   })
@@ -160,7 +158,6 @@ export default function AdminPage() {
           image: "",
           tags: "",
           category: "",
-          github: "",
           demo: "",
           status: "Draft",
         })
@@ -282,7 +279,6 @@ export default function AdminPage() {
       image: project.image,
       tags: project.tags.join(", "),
       category: project.category,
-      github: project.github,
       demo: project.demo,
       status: project.status,
     })
@@ -356,7 +352,6 @@ export default function AdminPage() {
                 Login
               </Button>
             </form>
-            <p className="text-sm text-muted-foreground mt-4 text-center">Demo: gunjpatel.23 / GDPatel$2310</p>
           </CardContent>
         </Card>
       </div>
@@ -504,12 +499,7 @@ export default function AdminPage() {
                         </SelectContent>
                       </Select>
                       <Input
-                        placeholder="GitHub URL"
-                        value={projectForm.github}
-                        onChange={(e) => setProjectForm({ ...projectForm, github: e.target.value })}
-                      />
-                      <Input
-                        placeholder="Demo URL"
+                        placeholder="Demo URL or Description"
                         value={projectForm.demo}
                         onChange={(e) => setProjectForm({ ...projectForm, demo: e.target.value })}
                       />
@@ -541,7 +531,6 @@ export default function AdminPage() {
                               image: "",
                               tags: "",
                               category: "",
-                              github: "",
                               demo: "",
                               status: "Draft",
                             })

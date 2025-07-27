@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "Gunj Patel - Software Developer",
   description: "Full-stack software developer specializing in modern web technologies, AI, and IoT solutions.",
   keywords: "software developer, full-stack, React, Node.js, AI, IoT, web development",
-    
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({

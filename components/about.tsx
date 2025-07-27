@@ -4,9 +4,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { motion } from "framer-motion"
-import { Code, Database, Brain, Award, GraduationCap, Heart, Music, Car, Users } from "lucide-react"
+import {
+  Code,
+  Database,
+  Brain,
+  Award,
+  GraduationCap,
+  Heart,
+  BirdIcon as Cricket,
+  Plane,
+  Music,
+  FileText,
+} from "lucide-react"
 import { CounterAnimation } from "@/components/counter-animation"
-import { MdSportsCricket } from "react-icons/md"
 
 export function About() {
   const skills = [
@@ -21,8 +31,8 @@ export function About() {
   const achievements = [
     { number: 10, label: "Projects Completed", icon: Code },
     { number: 3, label: "Years Experience", icon: Award },
-    { number: 8, label: "Technologies Mastered", icon: Brain },
-    { number: 100, label: "Happy Clients", icon: Users },
+    { number: 5, label: "Technologies Mastered", icon: Brain },
+    { number: 10, label: "Happy Clients", icon: Heart },
   ]
 
   const leadership = [
@@ -35,10 +45,10 @@ export function About() {
   ]
 
   const hobbies = [
-    { name: "Cricket", icon: MdSportsCricket },
-    { name: "Traveling", icon: Car },
+    { name: "Cricket", icon: Cricket },
+    { name: "Traveling", icon: Plane },
     { name: "Singing & Music", icon: Music },
-    { name: "Tech Blogging", icon: Code },
+    { name: "Tech Blogging", icon: FileText },
   ]
 
   return (
@@ -68,8 +78,12 @@ export function About() {
           >
             <Card className="h-full group hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
               <CardContent className="p-4 sm:p-6 text-center">
-                <div className="w-24 sm:w-32 h-24 sm:h-32 bg-gradient-to-br from-primary via-purple-500 to-secondary rounded-full mx-auto mb-4 sm:mb-6 flex items-center justify-center text-2xl sm:text-4xl font-bold text-white shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
-                  GP
+                <div className="w-24 sm:w-32 h-24 sm:h-32 mx-auto mb-4 sm:mb-6 rounded-full overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-105">
+                  <img
+                    src="https://i.postimg.cc/26FtQDb4/Whats-App-Image-2025-07-27-at-12-16-57-f03a15c6.jpg"
+                    alt="Gunj Patel"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold mb-2">Gunj Patel</h3>
                 <div className="space-y-2 mb-4">
@@ -80,7 +94,7 @@ export function About() {
                     Founder & Chairperson, TechForge Society
                   </Badge>
                 </div>
-                <p className="text-muted-foreground mb-4 text-sm sm:text-base">Full-Stack Developer & Tech Leader</p>
+                <p className="text-muted-foreground mb-4 text-sm sm:text-base">Software Developer & Tech Leader</p>
                 <p className="text-xs sm:text-sm leading-relaxed mb-4">
                   Passionate innovator and tech leader with expertise in AI, IoT, and web technologies. Founder of
                   AstraSoft Innovations and Chairperson of TechForge Society at MBIT, driving impactful tech solutions
@@ -154,11 +168,15 @@ export function About() {
                 <div className="space-y-3">
                   <div>
                     <h4 className="font-semibold text-sm sm:text-base">B.Tech Information Technology</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Madhuben & Bhanubhai Patel Institute of Technology (MBIT) CVM University • 2022-2026</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      Madhuben & Bhanubhai Patel Institute of Technology (MBIT) CVM University • 2022-2026
+                    </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-sm sm:text-base">S.Sc & H.Sc. GSEB</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground">BAPS Swaminarayan Vidhyamandir • 2020-2022</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">
+                      BAPS Swaminarayan Vidhyamandir • 2020-2022
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -197,7 +215,6 @@ export function About() {
                   <achievement.icon className="h-6 sm:h-8 w-6 sm:w-8 mx-auto mb-2 sm:mb-4 text-primary" />
                   <div className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">
                     <CounterAnimation end={achievement.number} />
-                    {achievement.label === "Happy Clients" && "%"}
                   </div>
                   <p className="text-xs sm:text-sm text-muted-foreground">{achievement.label}</p>
                 </CardContent>

@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-import { Github, ExternalLink, Filter } from "lucide-react"
+import { ExternalLink, Filter } from "lucide-react"
 import Image from "next/image"
 
 interface Project {
@@ -15,7 +15,6 @@ interface Project {
   image: string
   tags: string[]
   category: string
-  github: string
   demo: string
   status: string
   date: string
@@ -112,16 +111,6 @@ export function Projects() {
                         className="hover:scale-110 transition-transform duration-300"
                         asChild
                       >
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github size={16} />
-                        </a>
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="secondary"
-                        className="hover:scale-110 transition-transform duration-300"
-                        asChild
-                      >
                         <a href={project.demo} target="_blank" rel="noopener noreferrer">
                           <ExternalLink size={16} />
                         </a>
@@ -152,29 +141,16 @@ export function Projects() {
                 </CardContent>
 
                 <CardFooter className="p-4 sm:p-6 pt-0">
-                  <div className="flex space-x-2 w-full">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="flex-1 bg-transparent hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:scale-105 min-h-10"
-                      asChild
-                    >
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github size={16} className="mr-1" />
-                        Code
-                      </a>
-                    </Button>
-                    <Button
-                      size="sm"
-                      className="flex-1 bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-primary transition-all duration-300 hover:scale-105 min-h-10"
-                      asChild
-                    >
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} className="mr-1" />
-                        Demo
-                      </a>
-                    </Button>
-                  </div>
+                  <Button
+                    size="sm"
+                    className="w-full bg-gradient-to-r from-primary to-purple-600 hover:from-purple-600 hover:to-primary transition-all duration-300 hover:scale-105 min-h-10"
+                    asChild
+                  >
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink size={16} className="mr-1" />
+                      View Project
+                    </a>
+                  </Button>
                 </CardFooter>
               </Card>
             </motion.div>

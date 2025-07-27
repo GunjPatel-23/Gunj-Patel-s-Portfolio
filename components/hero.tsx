@@ -28,7 +28,7 @@ export function Hero() {
           </motion.h1>
 
           <div className="text-lg sm:text-xl md:text-2xl text-muted-foreground h-12 sm:h-16">
-            <TypewriterText texts={["Software Developer", "AI Enthusiast", "IoT Innovator", "Problem Solver"]} />
+            <TypewriterText texts={["Full-Stack Developer", "AI Enthusiast", "IoT Innovator", "Problem Solver"]} />
           </div>
 
           <motion.p
@@ -53,7 +53,7 @@ export function Hero() {
               onClick={() => {
                 // Create a dummy resume download
                 const link = document.createElement("a")
-                link.href = "https://drive.google.com/file/d/1lugU2Kq-lm27QFqKZN42FYtXGCglZIjQ/view?usp=sharing"
+                link.href = "/placeholder.svg?height=800&width=600&text=Gunj+Patel+Resume"
                 link.download = "Gunj_Patel_Resume.pdf"
                 link.click()
               }}

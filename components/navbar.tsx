@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ModeToggle } from "@/components/mode-toggle"
-import { Menu, X, Home, User, Briefcase, BookOpen, Mail, Shield } from "lucide-react"
+import { Menu, X, Home, User, Briefcase, BookOpen, Mail } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export function Navbar() {
@@ -25,7 +25,6 @@ export function Navbar() {
     { name: "Projects", href: "#projects", icon: Briefcase },
     { name: "Blog", href: "/blog", icon: BookOpen },
     { name: "Contact", href: "#contact", icon: Mail },
-    { name: "Admin", href: "/admin", icon: Shield },
   ]
 
   return (
